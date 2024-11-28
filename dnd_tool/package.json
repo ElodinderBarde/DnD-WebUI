@@ -1,0 +1,13 @@
+{
+    "name": "overlay",
+    "version": "1.0.0",
+    "description": "My project description",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "keywords": [],
+    "author": "Your Name",
+    "license": "ISC"
+  }
+  

@@ -1,0 +1,262 @@
+/* Grundlegendes Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    position: relative; /* Für absolute Positionierung der Container */
+    height: 700px; /* Höhe des Fensters */
+    width: 1000px; /* Breite des Fensters */
+    overflow: hidden; /* Verhindert Scrollbars */
+    background-color: #f0f0f0;
+  }
+  
+  /* Buttons oben links */
+  .header-buttons {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: row; /* Vertikale Anordnung */
+    gap: 10px;
+    z-index: 10;
+  }
+  
+  
+  .header-buttons button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .header-buttons button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Styling für die Container */
+  .container {
+    position: absolute; /* Ermöglicht pixelgenaue Positionierung */
+    border: 2px solid orange;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    box-sizing: border-box;
+  }
+  
+  /* Positionen und Größen der einzelnen Container */
+ 
+ /*Selection battlemaps*/
+ 
+
+ #container-1 {
+  position: fixed; /* Damit `sticky` funktioniert */
+  left: 10px; /* Abstand vom linken Rand */
+  top: 50px; /* Abstand vom oberen Rand */
+  width: 200px; /* Feste Breite */
+  height: 350px; /* Feste Höhe für den scrollbaren Bereich */
+  overflow-y: auto; /* Scrollbarer Inhalt */
+  padding: 0; /* Kein zusätzlicher Innenabstand */
+  box-sizing: border-box; /* Konsistente Breite/Höhe */
+  display: flex; /* Flexbox für vertikale Anordnung */
+  flex-direction: column; /* Kinder (Switch + Liste) untereinander anordnen */
+}
+
+
+
+
+  
+  /*shop Types*/
+
+  #container-2 {
+    left: 210px;
+    top: 50px;
+    width: 100px;
+    height: 300px;
+  }
+  /*shop list */
+
+  #container-3 {
+    left: 310px;
+    top: 50px;
+    width: 100px;
+    height: 300px;
+  }
+  
+  /*Active Quest*/
+
+  #container-4 {
+    left: 10px;
+    top: 350px;
+    width: 200px;
+    height: 350px;
+  }
+  
+/* active Map*/
+
+  #container-5 {
+    left: 210px;
+    top: 350px;
+    width: 510px;
+    height: 300px;
+  }
+  
+/*Employees*/
+
+  #container-6 {
+    left: 410px;
+    top: 50px;
+    width: 290px;
+    height: 150px;
+  }
+  
+/*Items*/
+
+  #container-7 {
+    left: 410px;
+    top: 200px;
+    width: 290px;
+    height: 150px;
+  }
+  /*Stats*/
+
+  #container-8 {
+    left: 1000px;
+    top: 20px;
+    width: 100px;
+    height: 700px;
+  }
+  
+/*NPC Charakterbogen*/
+
+  #container-9 {
+    left: 700px;
+    top: 20px;
+    width: 300px;
+    height: 700px;
+  }
+  
+
+
+
+
+  .city-list {
+    margin: 0; /* Entferne Außenabstand */
+    padding: 0; /* Entferne Innenabstand */
+    list-style-type: none; /* Entferne Listenpunkte */
+    overflow-y: auto; /* Vertikales Scrollen erlauben */
+    width: 100%; /* Volle Breite des Containers */
+    flex: 1; /* Nutze den verbleibenden Platz im Container */
+  }
+  
+
+
+/* Städte-Elemente */
+.city-item {
+  padding: 1px;
+  background-color: #fa7c7c;
+  margin-bottom: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 10px; /* Kompaktere Schriftgröße */
+
+}
+
+/* Hover-Effekt für Städte-Elemente */
+.city-item:hover {
+  background-color: #d0d0d0;
+  font-weight: bold;
+}
+
+
+.switch {
+  position: sticky; /* Fixiere die Buttons oben im Container */
+  top: 0; /* Fixiere am oberen Rand des Containers */
+  display: flex; /* Flexbox für horizontale Anordnung */
+  justify-content: space-evenly; /* Buttons gleichmäßig verteilt */
+  align-items: center; /* Vertikale Zentrierung */
+  background-color: #ffffff; /* Hintergrundfarbe */
+  z-index: 10; /* Sicherstellen, dass der Switch über der Liste bleibt */
+  padding: 10px; /* Angemessener Innenabstand */
+  width: 100%; /* Volle Breite des Containers */
+  border-bottom: 2px solid #e0e0e0; /* Optionale Trennlinie */
+  box-sizing: border-box; /* Konsistente Berechnung der Breite */
+}
+
+
+
+.switch button {
+  flex: none; /* Verhindert, dass die Buttons die gesamte Breite einnehmen */
+  width: 80px; /* Feste Breite für Buttons */
+  margin: 0 5px; /* Horizontaler Abstand zwischen den Buttons */
+  padding: 8px; /* Innenabstand für bessere Klickfläche */
+  background-color: #007bff; /* Farbe der Buttons */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px; /* Abgerundete Ecken */
+  text-align: center; /* Text zentrieren */
+}
+
+
+.switch button:hover {
+  background-color: #0056b3; /* Hover-Effekt */
+}
+
+.shop-type-list {
+  margin: 0;
+  padding: 5px;
+  list-style-type: none;
+  overflow-y: auto;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.shop-type-item {
+  padding: 8px;
+  background-color: #e0f7fa;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+  border: 1px solid #00838f;
+}
+
+.shop-type-item:hover {
+  background-color: #006064;
+  color: white;
+  font-weight: bold;
+}
+
+/* Styling für die Shop-Liste */
+.shop-list {
+  list-style-type: none; /* Entferne Standard-Listenpunkte */
+  padding: 10px; /* Innenabstand */
+  margin: 0; /* Außenabstand */
+  overflow-y: auto; /* Vertikales Scrollen erlauben */
+  height: 100%; /* Volle Höhe des Containers nutzen */
+  box-sizing: border-box;
+}
+
+.shop-list li {
+  padding: 10px;
+  background-color: #e0f7fa;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+  border: 1px solid #00796b;
+}
+
+.shop-list li:hover {
+  background-color: #00796b;
+  color: white;
+  font-weight: bold;
+}
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de_ch">
+<head>
+  <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Layout</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- Buttons oben links -->
+  <div class="header-buttons">
+    <button onclick="switchView('generator')">Generator</button>
+    <button onclick="switchView('npcList')">NPC List</button>
+    <button onclick="switchView('quests')">Quests</button>
+    <button onclick="switchView('main')">Main</button>
+  </div>
+
+  <!-- Hauptcontainer -->
+  <div class="container" id="container-1">
+    <div class="switch">
+      <button onclick="loadCities()">Cities</button>
+      <button onclick="loadVillages()">Villages</button>
+    </div>
+    <ul id="list-content" class="city-list"></ul> <!-- Liste für Städte und Dörfer -->
+  </div>
+
+  <div class="container" id="container-2">
+    <ul id="shop-type-content" class="shop-type-list"></ul> <!-- Liste für Shop Types -->
+  </div>
+  
+  <div class="container" id="container-3">
+    <ul id="shop-list-content" class="shop-list"></ul>
+</div>
+
+  
+
+  <div class="container" id="container-5">Map / Picture</div>
+  <div class="container" id="container-6">Employees</div>
+  <div class="container" id="container-7">Items</div>
+  <div class="container" id="container-8">Stats</div>
+  <div class="container" id="container-9">NPC Details</div>
+
+  <script>
+    function switchView(view) {
+      console.log('Switching view to:', view);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      loadCities(); // Lädt standardmäßig die Städte beim Laden der Seite
+    });
+  </script>
+</body>
+</html>
