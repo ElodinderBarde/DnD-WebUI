@@ -2,7 +2,7 @@
 // Datenbank-Verbindungsparameter
 $host = '127.0.0.1';        
 $user = 'root';             
-$password = 'Gofuckyourself_1996';             // Passwort leer lassen, wenn nicht gesetzt
+$password = '';             // Passwort leer lassen, wenn nicht gesetzt
 $database = 'dnd';          
 
 // Verbindung herstellen
