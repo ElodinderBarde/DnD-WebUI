@@ -1,0 +1,201 @@
+/* Grundlayout */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column; /* Vertikales Layout */
+  justify-content: flex-start; /* Startet oben */
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Overlay */
+.overlay {
+  width: 90%;
+  max-width: 1200px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 20px; /* Abstand vom oberen Rand */
+  overflow-y: auto; /* Ermöglicht Scrollen bei kleinerem Fenster */
+  max-height: calc(100vh - 40px); /* Passt sich der Bildschirmhöhe an */
+}
+
+/* Tabellencontainer */
+.table-container {
+  margin-bottom: 20px;
+}
+
+#generated-data {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#generated-data th,
+#generated-data td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+#generated-data th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+/* Optionen */
+.options {
+  margin-bottom: 20px;
+}
+
+.checkbox-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.dropdowns label {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#class-dropdown,
+#subclass-dropdown {
+  margin-right: 10px;
+  padding: 5px;
+  font-size: 14px;
+}
+
+/* Bildcontainer */
+.image-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#npc-image {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #ccc;
+  margin: 0 auto 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+}
+
+/* Charakter erstellen */
+.character-actions {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.character-actions button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.character-actions button:hover {
+  background-color: #0056b3;
+}
+
+/* Zuweisung */
+.assignment {
+  margin-bottom: 20px;
+}
+
+.assignment-dropdowns label,
+.role-checkboxes label {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.assignment-dropdowns select {
+  margin-right: 10px;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.role-checkboxes label {
+  margin-right: 20px;
+}
+
+/* Speichern Button */
+#save-character {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#save-character:hover {
+  background-color: #218838;
+}
+
+/* Familienliste */
+.family-container {
+  margin-top: 20px;
+}
+
+.family-container h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#family-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+#family-list li {
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#family-list li img {
+  max-width: 50px;
+  max-height: 50px;
+  margin-right: 10px;
+}
+
+.family-actions button {
+  margin-left: 5px;
+  padding: 5px 10px;
+  font-size: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.family-actions button:hover {
+  background-color: #0056b3;
+}
+
+.family-actions .delete {
+  background-color: #dc3545;
+}
+
+.family-actions .delete:hover {
+  background-color: #c82333;
+}

@@ -1,0 +1,1160 @@
+/* Grundlegendes Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    position: relative; /* Für absolute Positionierung der Container */
+    height: 700px; /* Höhe des Fensters */
+    width: 1000px; /* Breite des Fensters */
+    overflow: hidden; /* Verhindert Scrollbars */
+    background-color: #f0f0f0;
+  }
+  
+  /* Buttons oben links */
+  .header-buttons {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: row; /* Vertikale Anordnung */
+    gap: 10px;
+    z-index: 10;
+  }
+  
+  
+  .header-buttons button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .header-buttons button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Styling für die Container */
+  .container {
+    position: absolute; /* Ermöglicht pixelgenaue Positionierung */
+    border: 2px solid orange;
+    background-color: #fff;
+  
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    box-sizing: border-box;
+  }
+  
+  /* Positionen und Größen der einzelnen Container */
+ 
+ /*Selection battlemaps*/
+ 
+
+ #container-1 {
+  position: fixed; /* Damit `sticky` funktioniert */
+  left: 10px; /* Abstand vom linken Rand */
+  top: 50px; /* Abstand vom oberen Rand */
+  width: 200px; /* Feste Breite */
+  height: 350px; /* Feste Höhe für den scrollbaren Bereich */
+  overflow-y: auto; /* Scrollbarer Inhalt */
+  padding: 0; /* Kein zusätzlicher Innenabstand */
+  box-sizing: border-box; /* Konsistente Breite/Höhe */
+  display: flex; /* Flexbox für vertikale Anordnung */
+  flex-direction: column; /* Kinder (Switch + Liste) untereinander anordnen */
+}
+
+  /*shop Types*/
+
+  #container-2 {
+    left: 210px;
+    top: 50px;
+    width: 100px;
+    height: 300px;
+  }
+  /*shop list */
+
+  #container-3 {
+    left: 310px;
+    top: 50px;
+    width: 100px;
+    height: 300px;
+  }
+  
+  /*Active Quest*/
+
+  #container-4 {
+    left: 10px;
+    top: 350px;
+    width: 200px;
+    height: 350px;
+  }
+  
+/* active Map*/
+
+  #container-5 {
+    left: 210px;
+    top: 350px;
+    width: 510px;
+    height: 300px;
+  }
+  
+/* Employees Container */
+#container-6 {
+  position: absolute;
+  left: 410px;
+  top: 50px;
+  width: 290px;
+  height: 150px; /* Festgelegte Höhe für den gesamten Container */
+  border: 1px solid orange; /* Rahmen für Übersicht */
+  background-color: #ffffff; /* Hintergrundfarbe */
+  display: flex;
+  flex-direction: column; /* Buttons oben, Liste unten */
+  overflow: hidden; /* Kein Scrollen für den gesamten Container */
+}
+
+/* Fixierte Buttons oben */
+#container-6 .switch {
+  flex-shrink: 0; /* Verhindert, dass die Buttons durch Flexbox schrumpfen */
+  display: flex; /* Buttons nebeneinander */
+  justify-content: space-around; /* Gleichmäßige Verteilung der Buttons */
+  padding: 10px 5px; /* Innenabstand */
+  background-color: #f9f9f9; /* Hintergrundfarbe der Buttons */
+  border-bottom: 1px solid #ddd; /* Trennlinie unter den Buttons */
+}
+
+/* Mitarbeiter-Liste */
+#container-6 .employee-list {
+  list-style-type: none; /* Keine Standard-Listenpunkte */
+  margin: 0;
+  padding-right: 50px;
+  overflow-y: auto; /* Vertikales Scrollen nur für die Liste */
+  flex-grow: 1; /* Die Liste füllt den verbleibenden Platz des Containers */
+  max-height: calc(100% - 50px); /* Maximale Höhe: Containerhöhe abzüglich Buttons */
+  background-color: #fff; /* Hintergrundfarbe der Liste */
+}
+
+/* Einzelne Mitarbeiter-Items */
+.employee-item {
+  padding: 10px; /* Innenabstand für Einträge */
+  border-bottom: 1px solid #ddd; /* Trennlinie zwischen Einträgen */
+  flex-grow: 1;
+  font-size: 14px; /* Schriftgröße */
+  background-color: #ffffff; /* Hintergrundfarbe */
+  cursor: pointer; /* Klick-Hand */
+  transition: background-color 0.3s ease; /* Glatter Hover-Effekt */
+}
+
+/* Hover-Effekt für Mitarbeiter-Items */
+.employee-item:hover {
+  background-color: #f5f5f5; /* Leicht grauer Hintergrund bei Hover */
+}
+  
+
+
+  /* Container für Item-Liste */
+#container-7 {
+  left:410px;
+  top: 200px;
+  width: 290px;
+  height: 150px;
+  overflow-y: auto; /* Scrollbar erlauben */
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  padding: 10px; /* Abstand innerhalb des Containers */
+  
+}
+
+/* Einzelne Item-Einträge */
+.item-list-item {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  vertical-align: top;
+}
+
+.item-list-item:hover {
+  background-color: #f0f0f0;
+}
+
+  /*Stats*/
+
+  #container-8 {
+    left: 1000px;
+    top: 20px;
+    width: 200px;
+    height: 470px;
+    overflow-y: auto;
+  }
+  
+/*NPC Charakterbogen*/
+
+  #container-9 {
+    left: 700px;
+    top: 20px;
+    width: 300px;
+    height: 700px;
+    overflow-y: auto;
+  }
+  
+/*NPC Picture container*/
+  #container-10 {
+    left: 1200px;
+    top: 20px;
+    width:500px;
+    height:700px;
+} 
+
+
+  .city-list {
+    margin: 0; /* Entferne Außenabstand */
+    padding: 0; /* Entferne Innenabstand */
+    list-style-type: none; /* Entferne Listenpunkte */
+    overflow-y: auto; /* Vertikales Scrollen erlauben */
+    width: 100%; /* Volle Breite des Containers */
+    flex: 1; /* Nutze den verbleibenden Platz im Container */
+  }
+  
+
+
+/* Städte-Elemente */
+.city-item {
+  padding: 1px;
+  background-color: #fa7c7c;
+  margin-bottom: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 10px; /* Kompaktere Schriftgröße */
+
+}
+
+/* Hover-Effekt für Städte-Elemente */
+.city-item:hover {
+  background-color: #d0d0d0;
+  font-weight: bold;
+}
+
+
+.switch {
+  position: sticky; /* Fixiere die Buttons oben im Container */
+  top: 0; /* Fixiere am oberen Rand des Containers */
+  display: flex; /* Flexbox für horizontale Anordnung */
+  justify-content: space-evenly; /* Buttons gleichmäßig verteilt */
+  align-items: center; /* Vertikale Zentrierung */
+  background-color: #ffffff; /* Hintergrundfarbe */
+  z-index: 10; /* Sicherstellen, dass der Switch über der Liste bleibt */
+  padding: 10px; /* Angemessener Innenabstand */
+  width: 100%; /* Volle Breite des Containers */
+  border-bottom: 2px solid #e0e0e0; /* Optionale Trennlinie */
+  box-sizing: border-box; /* Konsistente Berechnung der Breite */
+}
+
+
+
+.switch button {
+  flex: none; /* Verhindert, dass die Buttons die gesamte Breite einnehmen */
+  width: 80px; /* Feste Breite für Buttons */
+  margin: 0 5px; /* Horizontaler Abstand zwischen den Buttons */
+  padding: 8px; /* Innenabstand für bessere Klickfläche */
+  background-color: #007bff; /* Farbe der Buttons */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px; /* Abgerundete Ecken */
+  text-align: center; /* Text zentrieren */
+}
+
+
+.switch button:hover {
+  background-color: #0056b3; /* Hover-Effekt */
+}
+
+.shop-type-list {
+  margin: 0;
+  padding: 5px;
+  list-style-type: none;
+  overflow-y: auto;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.shop-type-item {
+  padding: 8px;
+  background-color: #e0f7fa;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  /*text-align: center;*/
+  font-size: 14px;
+  border: 1px solid #00838f;
+}
+
+.shop-type-item:hover {
+  background-color: #006064;
+  color: white;
+  font-weight: bold;
+}
+
+/* Styling für die Shop-Liste */
+.shop-list {
+  list-style-type: none; /* Entferne Standard-Listenpunkte */
+  padding: 10px; /* Innenabstand */
+  margin: 0; /* Außenabstand */
+  overflow-y: auto; /* Vertikales Scrollen erlauben */
+  height: 100%; /* Volle Höhe des Containers nutzen */
+  box-sizing: border-box;
+}
+
+.shop-list li {
+  padding: 10px;
+  background-color: #e0f7fa;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  /*text-align: center;*/
+  font-size: 14px;
+  border: 1px solid #00796b;
+}
+
+.shop-list li:hover {
+  background-color: #00796b;
+  color: white;
+  font-weight: bold;
+}
+
+/* Tabelle-Styling */
+table {
+  width: 100%;
+  border-collapse: seperate;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+/* Grundlegendes Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  position: relative; /* Für absolute Positionierung der Container */
+  height: 700px; /* Höhe des Fensters */
+  width: 1000px; /* Breite des Fensters */
+  overflow: hidden; /* Verhindert Scrollbars */
+  background-color: #f0f0f0;
+}
+
+/* Buttons oben links */
+.header-buttons {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: row; /* Vertikale Anordnung */
+  gap: 10px;
+  z-index: 10;
+}
+
+
+.header-buttons button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.header-buttons button:hover {
+  background-color: #0056b3;
+}
+
+/* Styling für die Container */
+.container {
+  position: absolute; /* Ermöglicht pixelgenaue Positionierung */
+  border: 2px solid orange;
+  background-color: #fff;
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+/* Positionen und Größen der einzelnen Container */
+
+/*Selection battlemaps*/
+
+
+#container-1 {
+position: fixed; /* Damit `sticky` funktioniert */
+left: 10px; /* Abstand vom linken Rand */
+top: 50px; /* Abstand vom oberen Rand */
+width: 200px; /* Feste Breite */
+height: 350px; /* Feste Höhe für den scrollbaren Bereich */
+overflow-y: auto; /* Scrollbarer Inhalt */
+padding: 0; /* Kein zusätzlicher Innenabstand */
+box-sizing: border-box; /* Konsistente Breite/Höhe */
+display: flex; /* Flexbox für vertikale Anordnung */
+flex-direction: column; /* Kinder (Switch + Liste) untereinander anordnen */
+}
+
+/*shop Types*/
+
+#container-2 {
+  left: 210px;
+  top: 50px;
+  width: 100px;
+  height: 300px;
+}
+/*shop list */
+
+#container-3 {
+  left: 310px;
+  top: 50px;
+  width: 100px;
+  height: 300px;
+}
+
+/*Active Quest*/
+
+#container-4 {
+  left: 10px;
+  top: 350px;
+  width: 200px;
+  height: 350px;
+}
+
+/* active Map*/
+
+#container-5 {
+  left: 210px;
+  top: 350px;
+  width: 510px;
+  height: 300px;
+}
+
+/* Employees Container */
+#container-6 {
+position: absolute;
+left: 410px;
+top: 50px;
+width: 290px;
+height: 150px; /* Festgelegte Höhe für den gesamten Container */
+border: 1px solid orange; /* Rahmen für Übersicht */
+background-color: #ffffff; /* Hintergrundfarbe */
+display: flex;
+flex-direction: column; /* Buttons oben, Liste unten */
+overflow: hidden; /* Kein Scrollen für den gesamten Container */
+}
+
+/* Fixierte Buttons oben */
+#container-6 .switch {
+flex-shrink: 0; /* Verhindert, dass die Buttons durch Flexbox schrumpfen */
+display: flex; /* Buttons nebeneinander */
+justify-content: space-around; /* Gleichmäßige Verteilung der Buttons */
+padding: 10px 5px; /* Innenabstand */
+background-color: #f9f9f9; /* Hintergrundfarbe der Buttons */
+border-bottom: 1px solid #ddd; /* Trennlinie unter den Buttons */
+}
+
+/* Mitarbeiter-Liste */
+#container-6 .employee-list {
+list-style-type: none; /* Keine Standard-Listenpunkte */
+margin: 0;
+padding-right: 50px;
+overflow-y: auto; /* Vertikales Scrollen nur für die Liste */
+flex-grow: 1; /* Die Liste füllt den verbleibenden Platz des Containers */
+max-height: calc(100% - 50px); /* Maximale Höhe: Containerhöhe abzüglich Buttons */
+background-color: #fff; /* Hintergrundfarbe der Liste */
+}
+
+/* Einzelne Mitarbeiter-Items */
+.employee-item {
+padding: 10px; /* Innenabstand für Einträge */
+border-bottom: 1px solid #ddd; /* Trennlinie zwischen Einträgen */
+flex-grow: 1;
+font-size: 14px; /* Schriftgröße */
+background-color: #ffffff; /* Hintergrundfarbe */
+cursor: pointer; /* Klick-Hand */
+transition: background-color 0.3s ease; /* Glatter Hover-Effekt */
+}
+
+/* Hover-Effekt für Mitarbeiter-Items */
+.employee-item:hover {
+background-color: #f5f5f5; /* Leicht grauer Hintergrund bei Hover */
+}
+
+
+
+/* Container für Item-Liste */
+#container-7 {
+left:410px;
+top: 200px;
+width: 290px;
+height: 150px;
+overflow-y: auto; /* Scrollbar erlauben */
+border: 1px solid #ddd;
+background-color: #f9f9f9;
+padding: 10px; /* Abstand innerhalb des Containers */
+
+}
+
+/* Einzelne Item-Einträge */
+.item-list-item {
+padding: 10px;
+border-bottom: 1px solid #ccc;
+background-color: #fff;
+font-size: 14px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+vertical-align: top;
+}
+
+.item-list-item:hover {
+background-color: #f0f0f0;
+}
+
+/*Stats*/
+
+#container-8 {
+  left: 1000px;
+  top: 20px;
+  width: 200px;
+  height: 470px;
+  overflow-y: auto;
+}
+
+/*NPC Charakterbogen*/
+
+#container-9 {
+  left: 700px;
+  top: 20px;
+  width: 300px;
+  height: 700px;
+  overflow-y: auto;
+}
+
+/*NPC Picture container*/
+#container-10 {
+  left: 1200px;
+  top: 20px;
+  width:500px;
+  height:700px;
+} 
+
+
+.city-list {
+  margin: 0; /* Entferne Außenabstand */
+  padding: 0; /* Entferne Innenabstand */
+  list-style-type: none; /* Entferne Listenpunkte */
+  overflow-y: auto; /* Vertikales Scrollen erlauben */
+  width: 100%; /* Volle Breite des Containers */
+  flex: 1; /* Nutze den verbleibenden Platz im Container */
+}
+
+
+
+/* Städte-Elemente */
+.city-item {
+padding: 1px;
+background-color: #fa7c7c;
+margin-bottom: 2px;
+border-radius: 5px;
+cursor: pointer;
+text-align: center;
+font-size: 10px; /* Kompaktere Schriftgröße */
+
+}
+
+/* Hover-Effekt für Städte-Elemente */
+.city-item:hover {
+background-color: #d0d0d0;
+font-weight: bold;
+}
+
+
+.switch {
+position: sticky; /* Fixiere die Buttons oben im Container */
+top: 0; /* Fixiere am oberen Rand des Containers */
+display: flex; /* Flexbox für horizontale Anordnung */
+justify-content: space-evenly; /* Buttons gleichmäßig verteilt */
+align-items: center; /* Vertikale Zentrierung */
+background-color: #ffffff; /* Hintergrundfarbe */
+z-index: 10; /* Sicherstellen, dass der Switch über der Liste bleibt */
+padding: 10px; /* Angemessener Innenabstand */
+width: 100%; /* Volle Breite des Containers */
+border-bottom: 2px solid #e0e0e0; /* Optionale Trennlinie */
+box-sizing: border-box; /* Konsistente Berechnung der Breite */
+}
+
+
+
+.switch button {
+flex: none; /* Verhindert, dass die Buttons die gesamte Breite einnehmen */
+width: 80px; /* Feste Breite für Buttons */
+margin: 0 5px; /* Horizontaler Abstand zwischen den Buttons */
+padding: 8px; /* Innenabstand für bessere Klickfläche */
+background-color: #007bff; /* Farbe der Buttons */
+color: white;
+border: none;
+cursor: pointer;
+border-radius: 5px; /* Abgerundete Ecken */
+text-align: center; /* Text zentrieren */
+}
+
+
+.switch button:hover {
+background-color: #0056b3; /* Hover-Effekt */
+}
+
+.shop-type-list {
+margin: 0;
+padding: 5px;
+list-style-type: none;
+overflow-y: auto;
+height: 100%;
+box-sizing: border-box;
+}
+
+.shop-type-item {
+padding: 8px;
+background-color: #e0f7fa;
+margin-bottom: 5px;
+border-radius: 4px;
+cursor: pointer;
+/*text-align: center;*/
+font-size: 14px;
+border: 1px solid #00838f;
+}
+
+.shop-type-item:hover {
+background-color: #006064;
+color: white;
+font-weight: bold;
+}
+
+/* Styling für die Shop-Liste */
+.shop-list {
+list-style-type: none; /* Entferne Standard-Listenpunkte */
+padding: 10px; /* Innenabstand */
+margin: 0; /* Außenabstand */
+overflow-y: auto; /* Vertikales Scrollen erlauben */
+height: 100%; /* Volle Höhe des Containers nutzen */
+box-sizing: border-box;
+}
+
+.shop-list li {
+padding: 10px;
+background-color: #e0f7fa;
+margin-bottom: 5px;
+border-radius: 5px;
+cursor: pointer;
+/*text-align: center;*/
+font-size: 14px;
+border: 1px solid #00796b;
+}
+
+.shop-list li:hover {
+background-color: #00796b;
+color: white;
+font-weight: bold;
+}
+
+/* Tabelle-Styling */
+table {
+width: 100%;
+border-collapse: seperate;
+}
+
+table th, table td {
+border: 1px solid #ccc;
+padding: 10px;
+text-align: left;
+}
+
+table th {
+background-color: #f0f0f0;
+font-weight: bold;
+}
+
+
+
+/* picture fullscreen*/
+
+/* Vollbild-Container verstecken */
+#fullscreen-container {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.8); /* Hintergrund mit Transparenz */
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1000; /* Über allen anderen Elementen */
+visibility: hidden;
+opacity: 0;
+transition: opacity 0.3s ease-in-out;
+}
+
+/* Sichtbar machen */
+#fullscreen-container.visible {
+visibility: visible;
+opacity: 1;
+}
+
+/* Vollbild-Bild */
+#fullscreen-image {
+max-width: 90%;
+max-height: 90%;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+border-radius: 5px;
+}
+
+/* Schließen-Button */
+#close-fullscreen {
+position: absolute;
+top: 10px;
+right: 10px;
+background-color: red;
+color: white;
+border: none;
+border-radius: 50%;
+width: 40px;
+height: 40px;
+font-size: 20px;
+cursor: pointer;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+#close-fullscreen:hover {
+background-color: darkred;
+}
+/* Grundlegendes Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  position: relative; /* Für absolute Positionierung der Container */
+  height: 700px; /* Höhe des Fensters */
+  width: 1000px; /* Breite des Fensters */
+  overflow: hidden; /* Verhindert Scrollbars */
+  background-color: #f0f0f0;
+}
+
+/* Buttons oben links */
+.header-buttons {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: row; /* Vertikale Anordnung */
+  gap: 10px;
+  z-index: 10;
+}
+
+
+.header-buttons button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.header-buttons button:hover {
+  background-color: #0056b3;
+}
+
+/* Styling für die Container */
+.container {
+  position: absolute; /* Ermöglicht pixelgenaue Positionierung */
+  border: 2px solid orange;
+  background-color: #fff;
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+/* Positionen und Größen der einzelnen Container */
+
+/*Selection battlemaps*/
+
+
+#container-1 {
+position: fixed; /* Damit `sticky` funktioniert */
+left: 10px; /* Abstand vom linken Rand */
+top: 50px; /* Abstand vom oberen Rand */
+width: 200px; /* Feste Breite */
+height: 350px; /* Feste Höhe für den scrollbaren Bereich */
+overflow-y: auto; /* Scrollbarer Inhalt */
+padding: 0; /* Kein zusätzlicher Innenabstand */
+box-sizing: border-box; /* Konsistente Breite/Höhe */
+display: flex; /* Flexbox für vertikale Anordnung */
+flex-direction: column; /* Kinder (Switch + Liste) untereinander anordnen */
+}
+
+/*shop Types*/
+
+#container-2 {
+  left: 210px;
+  top: 50px;
+  width: 100px;
+  height: 300px;
+}
+/*shop list */
+
+#container-3 {
+  left: 310px;
+  top: 50px;
+  width: 100px;
+  height: 300px;
+}
+
+/*Active Quest*/
+
+#container-4 {
+  left: 10px;
+  top: 400px;
+  width: 200px;
+  height: 350px;
+}
+
+/* active Map*/
+
+#container-5 {
+  left: 210px;
+  top: 350px;
+  width: 510px;
+  height: 300px;
+}
+
+/* Employees Container */
+#container-6 {
+position: absolute;
+left: 410px;
+top: 50px;
+width: 290px;
+height: 150px; /* Festgelegte Höhe für den gesamten Container */
+border: 1px solid orange; /* Rahmen für Übersicht */
+background-color: #ffffff; /* Hintergrundfarbe */
+display: flex;
+flex-direction: column; /* Buttons oben, Liste unten */
+overflow: hidden; /* Kein Scrollen für den gesamten Container */
+}
+
+/* Fixierte Buttons oben */
+#container-6 .switch {
+flex-shrink: 0; /* Verhindert, dass die Buttons durch Flexbox schrumpfen */
+display: flex; /* Buttons nebeneinander */
+justify-content: space-around; /* Gleichmäßige Verteilung der Buttons */
+padding: 10px 5px; /* Innenabstand */
+background-color: #f9f9f9; /* Hintergrundfarbe der Buttons */
+border-bottom: 1px solid #ddd; /* Trennlinie unter den Buttons */
+}
+
+/* Mitarbeiter-Liste */
+#container-6 .employee-list {
+list-style-type: none; /* Keine Standard-Listenpunkte */
+margin: 0;
+padding-right: 50px;
+overflow-y: auto; /* Vertikales Scrollen nur für die Liste */
+flex-grow: 1; /* Die Liste füllt den verbleibenden Platz des Containers */
+max-height: calc(100% - 50px); /* Maximale Höhe: Containerhöhe abzüglich Buttons */
+background-color: #fff; /* Hintergrundfarbe der Liste */
+}
+
+/* Einzelne Mitarbeiter-Items */
+.employee-item {
+padding: 10px; /* Innenabstand für Einträge */
+border-bottom: 1px solid #ddd; /* Trennlinie zwischen Einträgen */
+flex-grow: 1;
+font-size: 14px; /* Schriftgröße */
+background-color: #ffffff; /* Hintergrundfarbe */
+cursor: pointer; /* Klick-Hand */
+transition: background-color 0.3s ease; /* Glatter Hover-Effekt */
+}
+
+/* Hover-Effekt für Mitarbeiter-Items */
+.employee-item:hover {
+background-color: #f5f5f5; /* Leicht grauer Hintergrund bei Hover */
+}
+
+
+
+/* Container für Item-Liste */
+#container-7 {
+left:410px;
+top: 200px;
+width: 290px;
+height: 150px;
+overflow-y: auto; /* Scrollbar erlauben */
+border: 1px solid #ddd;
+background-color: #f9f9f9;
+padding: 10px; /* Abstand innerhalb des Containers */
+
+}
+
+/* Einzelne Item-Einträge */
+.item-list-item {
+padding: 10px;
+border-bottom: 1px solid #ccc;
+background-color: #fff;
+font-size: 14px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+vertical-align: top;
+}
+
+.item-list-item:hover {
+background-color: #f0f0f0;
+}
+
+/*Stats*/
+
+#container-8 {
+  left: 1000px;
+  top: 20px;
+  width: 200px;
+  height: 470px;
+  overflow-y: auto;
+}
+
+/*NPC Charakterbogen*/
+
+#container-9 {
+  left: 700px;
+  top: 20px;
+  width: 300px;
+  height: 700px;
+  overflow-y: auto;
+}
+
+/*NPC Picture container*/
+#container-10 {
+  left: 1200px;
+  top: 20px;
+  width: 500px;
+  height: 700px;
+  border: 2px solid orange;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+
+.city-list {
+  margin: 0; /* Entferne Außenabstand */
+  padding: 0; /* Entferne Innenabstand */
+  list-style-type: none; /* Entferne Listenpunkte */
+  overflow-y: auto; /* Vertikales Scrollen erlauben */
+  width: 100%; /* Volle Breite des Containers */
+  flex: 1; /* Nutze den verbleibenden Platz im Container */
+}
+
+
+
+/* Städte-Elemente */
+.city-item {
+padding: 1px;
+background-color: #fa7c7c;
+margin-bottom: 2px;
+border-radius: 5px;
+cursor: pointer;
+text-align: center;
+font-size: 10px; /* Kompaktere Schriftgröße */
+
+}
+
+/* Hover-Effekt für Städte-Elemente */
+.city-item:hover {
+background-color: #d0d0d0;
+font-weight: bold;
+}
+
+
+.switch {
+position: sticky; /* Fixiere die Buttons oben im Container */
+top: 0; /* Fixiere am oberen Rand des Containers */
+display: flex; /* Flexbox für horizontale Anordnung */
+justify-content: space-evenly; /* Buttons gleichmäßig verteilt */
+align-items: center; /* Vertikale Zentrierung */
+background-color: #ffffff; /* Hintergrundfarbe */
+z-index: 10; /* Sicherstellen, dass der Switch über der Liste bleibt */
+padding: 10px; /* Angemessener Innenabstand */
+width: 100%; /* Volle Breite des Containers */
+border-bottom: 2px solid #e0e0e0; /* Optionale Trennlinie */
+box-sizing: border-box; /* Konsistente Berechnung der Breite */
+}
+
+
+
+.switch button {
+flex: none; /* Verhindert, dass die Buttons die gesamte Breite einnehmen */
+width: 80px; /* Feste Breite für Buttons */
+margin: 0 5px; /* Horizontaler Abstand zwischen den Buttons */
+padding: 8px; /* Innenabstand für bessere Klickfläche */
+background-color: #007bff; /* Farbe der Buttons */
+color: white;
+border: none;
+cursor: pointer;
+border-radius: 5px; /* Abgerundete Ecken */
+text-align: center; /* Text zentrieren */
+}
+
+
+.switch button:hover {
+background-color: #0056b3; /* Hover-Effekt */
+}
+
+.shop-type-list {
+margin: 0;
+padding: 5px;
+list-style-type: none;
+overflow-y: auto;
+height: 100%;
+box-sizing: border-box;
+}
+
+.shop-type-item {
+padding: 8px;
+background-color: #e0f7fa;
+margin-bottom: 5px;
+border-radius: 4px;
+cursor: pointer;
+/*text-align: center;*/
+font-size: 14px;
+border: 1px solid #00838f;
+}
+
+.shop-type-item:hover {
+background-color: #006064;
+color: white;
+font-weight: bold;
+}
+
+/* Styling für die Shop-Liste */
+.shop-list {
+list-style-type: none; /* Entferne Standard-Listenpunkte */
+padding: 10px; /* Innenabstand */
+margin: 0; /* Außenabstand */
+overflow-y: auto; /* Vertikales Scrollen erlauben */
+height: 100%; /* Volle Höhe des Containers nutzen */
+box-sizing: border-box;
+}
+
+.shop-list li {
+padding: 10px;
+background-color: #e0f7fa;
+margin-bottom: 5px;
+border-radius: 5px;
+cursor: pointer;
+/*text-align: center;*/
+font-size: 14px;
+border: 1px solid #00796b;
+}
+
+.shop-list li:hover {
+background-color: #00796b;
+color: white;
+font-weight: bold;
+}
+
+/* Tabelle-Styling */
+table {
+width: 100%;
+border-collapse: seperate;
+}
+
+table th, table td {
+border: 1px solid #ccc;
+padding: 10px;
+text-align: left;
+}
+
+table th {
+background-color: #f0f0f0;
+font-weight: bold;
+}
+
+
+
+/* picture fullscreen*/
+
+/* Vollbild-Container verstecken */
+#fullscreen-container {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.8); /* Hintergrund mit Transparenz */
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1000; /* Über allen anderen Elementen */
+visibility: hidden;
+opacity: 0;
+transition: opacity 0.3s ease-in-out;
+}
+
+/* Sichtbar machen */
+#fullscreen-container.visible {
+visibility: visible;
+opacity: 1;
+}
+
+/* Vollbild-Bild */
+#fullscreen-image {
+  max-width: none; /* Entfernt Einschränkungen der Bildgröße */
+  max-height: none;
+  transform: scale(1); /* Standardzoom */
+  transition: transform 0.3s ease; /* Smooth-Zoom */
+  cursor: grab; /* Zeigt an, dass das Bild verschiebbar ist */
+}
+
+#fullscreen-image:active {
+  cursor: grabbing;
+}
+/* Schließen-Button */
+#close-fullscreen {
+position: absolute;
+top: 10px;
+right: 10px;
+background-color: red;
+color: white;
+border: none;
+border-radius: 50%;
+width: 40px;
+height: 40px;
+font-size: 20px;
+cursor: pointer;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+#close-fullscreen:hover {
+background-color: darkred;
+}
