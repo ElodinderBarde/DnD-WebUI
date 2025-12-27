@@ -2,7 +2,7 @@
 // Datenbank-Verbindungsparameter
 $host = '127.0.0.1';        
 $user = 'root';             
-$password = 'Gofuckyourself_1996';             // Passwort leer lassen, wenn nicht gesetzt
+$password = '';             // Passwort leer lassen, wenn nicht gesetzt
 $database = 'dnd';          
 
 // Verbindung herstellen
@@ -16,3 +16,4 @@ if ($conn->connect_error) {
 // UTF-8-Encoding setzen
 $conn->set_charset("utf8");
 ?>
+
